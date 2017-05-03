@@ -398,7 +398,7 @@ a function callback which decides whether we show the step in the UI.
 	            <section data-markdown>
 	                <script type="text/template">
 
-## Properties
+### `Properties`
 Properties are dynamic variables available during the build.
 Schedulers can define properties to change the buildsteps behaviours.
 ```python
@@ -412,7 +412,7 @@ f.addStep(steps.ShellCommand(command=['echo', 'buildername:',
 	            <section data-markdown>
 	                <script type="text/template">
 
-## Properties are only available in a dynamic context!
+Properties are only available in a dynamic context!
 ```python
 # no!
 if Property('release_train') == 'alpha':
@@ -429,7 +429,7 @@ f.addStep(steps.ShellCommand(
 	            <section data-markdown>
 	                <script type="text/template">
 
-## Interpolate
+### `Interpolate`
 ```python
 f.addStep(steps.ShellCommand(util.Interpolate("""
     for i in `seq %(prop:NUM_RUN:-1)s`
@@ -449,7 +449,7 @@ f.addStep(steps.ShellCommand(util.Interpolate("""
 
 	            <section data-markdown>
 	                <script type="text/template">
-## Schedulers
+### `Schedulers`
 ```python
 c['schedulers'].append(
     SingleBranchScheduler(
@@ -461,7 +461,7 @@ c['schedulers'].append(
 
 	            <section data-markdown>
 	                <script type="text/template">
-## ChangeFilters
+### `ChangeFilters`
 ```python
 my_filter = util.ChangeFilter(
     project_re="^baseproduct/.*", branch="devel")
@@ -476,9 +476,9 @@ c['schedulers'].append(
 
 	            <section data-markdown>
 	                <script type="text/template">
-## TreeStableTimer
+### `TreeStableTimer`
 
-Wait n seconds of innactivity before kicking a build
+Wait n seconds of inactivity before kicking a build
 
 ```python
 c['schedulers'].append(
@@ -493,7 +493,7 @@ c['schedulers'].append(
 
 	            <section data-markdown>
 	                <script type="text/template">
-#### ForceSchedulers
+### `ForceSchedulers`
 
 Ability to describe a UI form which allows to configure and start a build manually
 
