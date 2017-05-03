@@ -45,6 +45,7 @@
         <!-- Any section element inside of this container is displayed as a slide -->
         <div class="slides">
             <section>
+            <section data-background-size="30%"data-background="nut.png">
                 <h1>Buildbot</h1>
                 <h3>a Continuous Integration Framework</h3>
                 <h4>Build and scale your own Continuous Integration System</h3>
@@ -52,9 +53,12 @@
 						<small>Presentation by <a href="https://github.com/tardyp">Pierre Tardy</a></small>
 					</p>
 				</section>
+				</section>
 				<section>
-					<section>
-						<img data-src="photo.jpeg"/>
+					<section data-background-size="20%"data-background="photo.jpeg">
+                        <h2>&nbsp;<h2>
+                        <h2>&nbsp;<h2>
+                        <h2>&nbsp;<h2>
 						<h2>About Me</h2>
 					</section>
 					<section>
@@ -346,7 +350,7 @@ a Failure will cause the build to finish immediately
 
 a step with alwaysRun flag will always run, even if there is haltOnFailure step which would have prevented it to run.
 
-Useful for cleanups
+Useful for cleanups or build artifacts upload
 ```python
 f.addStep(steps.ShellCommand(
     command=["service", "mysql", "stop"],
