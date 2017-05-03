@@ -19,7 +19,11 @@
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
-
+    <style>
+    h3 code{
+        text-transform: none;
+    }
+    </style>
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -326,6 +330,7 @@ make install
 	            <section>
 					<h3> Buildsteps </h3>
                     <img data-src="buildstepcommon.png" />
+                    <small><a href="http://docs.buildbot.net/latest/manual/cfg-buildsteps.html#common-parameters">http://docs.buildbot.net/latest/manual/cfg-buildsteps.html#common-parameters</a></small>
 	            </section>
 
 
@@ -333,10 +338,12 @@ make install
 
 	            <section data-markdown>
 	                <script type="text/template">
-#### haltOnFailure
+### `haltOnFailure`
+
 a Failure will cause the build to finish immediately
 
-#### alwaysRun
+### `alwaysRun`
+
 a step with alwaysRun flag will always run, even if there is haltOnFailure step which would have prevented it to run.
 
 Useful for cleanups
@@ -351,10 +358,10 @@ f.addStep(steps.ShellCommand(
 
 	            <section data-markdown>
 	                <script type="text/template">
-#### flunkOnFailure
+### `flunkOnFailure`
 a Failure will cause the build to be marked failed
 
-#### warnOnFailure
+### `warnOnFailure`
 a Failure will cause the build to be marked warning if it is not already marked as failed.
 	                </script>
 	            </section>
@@ -362,11 +369,11 @@ a Failure will cause the build to be marked warning if it is not already marked 
 
 	            <section data-markdown>
 	                <script type="text/template">
-For shell commands, its best to set description on top of name of step.
-#### description
+For shell commands, it's best to set description on top of the name of a step.
+### `description`
 a short message for the UI to show what's going on
 
-#### descriptionDone
+### `descriptionDone`
 a short message for the UI to show what was going on
 	                </script>
 	            </section>
@@ -375,10 +382,10 @@ a short message for the UI to show what was going on
 	            <section data-markdown>
 	                <script type="text/template">
 
-#### doStepIf
+### `doStepIf`
 a function callback which decides whether we run the step.
 
-#### hideStepIf
+### `hideStepIf`
 a function callback which decides whether we show the step in the UI.
 	                </script>
 	            </section>
