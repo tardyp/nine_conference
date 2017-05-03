@@ -115,6 +115,11 @@
             </section>
 
             </section>
+	            <section>
+					<h3> Questions </h3>
+	<a href="https://www.explainxkcd.com/wiki/index.php/1448:_Question"><img data-src="question.png"/> </a>
+	            </section>
+
             <section>
                 <section>
                     <h2>Agile</h2>
@@ -287,6 +292,16 @@ c['builders'].append(
 )```
 	                </script>
 	            </section>
+	            <section data-markdown>
+	                <script type="text/template">
+
+```python
+c['builders'].append(
+  BuilderConfig(name='test', factory=f))
+```
+Wait.. What is that factory thing?
+    </script>
+	            </section>
 
             </section>
 
@@ -297,8 +312,6 @@ c['builders'].append(
 					<h3> let's compile! </h3>
                     <img data-src="compiling.png" />
 	            </section>
-
-
 	            <section data-markdown>
 	                <script type="text/template">
 ## BuildFactory configurations
@@ -676,7 +689,6 @@ https://medium.com/buildbot
 Some are deploying it with 10 masters and 320 worker CPUs...
 					</script>
 	            </section>
-
             </section>
 
 	    </div>
